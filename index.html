@@ -1,0 +1,131 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VICORM – Consultorio Psicológico</title>
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f2f2f2;color:#333}
+header{background:#5a2d82;color:#fff;text-align:center;padding:1.5em}
+.logo{width:140px;height:140px;margin:auto;border-radius:50%;background:#fff;color:#5a2d82;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.6em}
+.container{max-width:1000px;margin:auto;padding:1em}
+.card{background:#fff;border-radius:12px;padding:1.2em;margin-bottom:1.2em;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+h2{color:#5a2d82;border-bottom:2px solid #5a2d82;padding-bottom:.3em}
+ul{list-style:none;padding:0}li{padding:.3em 0}
+.btn{display:inline-block;margin:.4em 0;padding:.7em 1.2em;border-radius:8px;text-decoration:none;color:#fff;font-weight:600}
+.whatsapp{background:#25d366}
+.facebook{background:#1877f2}
+.cita{background:#ff6f61}
+footer{text-align:center;background:#333;color:#fff;padding:1em;margin-top:2em}
+
+/* Asistente */
+#asistente{position:fixed;bottom:20px;right:20px;width:90px;cursor:pointer;z-index:999;animation:float 3s ease-in-out infinite}
+#asistente img{width:100%;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+#burbuja{display:none;position:absolute;bottom:110px;right:0;background:#fff;padding:.7em 1em;border-radius:15px;box-shadow:0 4px 12px rgba(0,0,0,.25);font-size:.9em;max-width:220px}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+@media(max-width:768px){.logo{width:110px;height:110px;font-size:1.2em}h2{font-size:1.2em}#asistente{width:75px;right:10px;bottom:10px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">VICORM</div>
+<p>Lic. en Psicología Virginia Coronel M.</p>
+<a class="btn whatsapp" href="https://wa.me/525567096775" target="_blank">WhatsApp 5567096775</a><br>
+<a class="btn facebook" href="https://www.facebook.com/PsicVicorm" target="_blank">Facebook</a>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Bienvenida</h2>
+<p>VICORM es un espacio armónico, ético y profesional, enfocado en el bienestar emocional, legal y terapéutico. Atendemos con respeto absoluto a todas las personas sin distinción étnica, cultural, sexual, religiosa o social.</p>
+</div>
+
+<div class="card">
+<h2>Servicios</h2>
+<ul>
+<li>Terapia violencia intrafamiliar y sexual</li>
+<li>Tanatología</li>
+<li>Depresión y ansiedad</li>
+<li>Problemas de conducta y aprendizaje</li>
+<li>Terapia de pareja</li>
+<li>T.D.A y T.D.A.H</li>
+<li>Rutinas diarias</li>
+<li>Peritajes psicológicos y metaperitajes</li>
+<li>Certificación en autismo</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Experiencia Profesional</h2>
+<ul>
+<li>Perito en Psicología Forense para la Defensa (desde 2019)</li>
+<li>Psicoterapeuta y evaluadora vía particular</li>
+<li>Psicóloga evaluadora en DIF Ixtapaluca, Edo. Méx. (6 años)</li>
+<li>Certificación en Psicopatología y Psicometría Forense – SOCIFO</li>
+<li>Experto Forense – Sociedad Iberoamericana de Psicología Jurídica</li>
+<li>Ponente y capacitadora en instituciones forenses y universidades</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Horarios y Pagos</h2>
+<ul>
+<li>Lunes a viernes: 9:00 am – 7:00 pm</li>
+<li>Sábado y domingo: 9:00 am – 3:00 pm</li>
+<li>Pagos: efectivo y transferencia</li>
+<li>Atención con cita previa</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Buzón Anónimo</h2>
+<a class="btn whatsapp" href="https://wa.me/525567096775?text=Mensaje%20anónimo" target="_blank">Enviar mensaje anónimo</a>
+</div>
+
+<div class="card">
+<h2>Agendar Cita</h2>
+<a class="btn cita" href="https://wa.me/525567096775?text=Nombre:%20____%20Fecha:%20____%20Horario:%20____%20Terapia:%20Individual/Pareja" target="_blank">Crear cita</a>
+</div>
+
+<div class="card">
+<h2>Aviso de Privacidad</h2>
+<p>Los datos personales son confidenciales y protegidos conforme a la ley. Cancelaciones con 48 horas de anticipación; de lo contrario se cobrará el espacio.</p>
+</div>
+
+<div class="card">
+<h2>Ubicación</h2>
+<p>Miguel Hidalgo Mz23 Lt15, Los Héroes, 55585 Ixtapaluca, Estado de México.</p>
+</div>
+
+</div>
+
+<!-- Asistente -->
+<div id="asistente">
+<img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Asistente VICORM">
+<div id="burbuja">Hola, soy tu asistente VICORM 😊</div>
+</div>
+<script>
+const asistente=document.getElementById('asistente');
+const burbuja=document.getElementById('burbuja');
+const mensajes=[
+'¿Deseas agendar una cita? 🗓️',
+'Área legal y terapéutica ⚖️🧠',
+'Tus datos son confidenciales 🔒',
+'Pagos en efectivo y transferencia 💳'
+];
+let i=0;
+asistente.onclick=()=>{burbuja.style.display='block';burbuja.innerHTML=mensajes[i];i=(i+1)%mensajes.length};
+asistente.onmouseenter=()=>burbuja.style.display='block';
+asistente.onmouseleave=()=>burbuja.style.display='none';
+</script>
+
+<footer>
+© 2026 VICORM – Consultorio Psicológico | Estado de México
+</footer>
+</body>
+</html>
+```
